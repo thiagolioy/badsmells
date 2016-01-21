@@ -13,6 +13,7 @@
 		205364C91C50CD77004414F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205364C71C50CD77004414F3 /* Main.storyboard */; };
 		205364CB1C50CD77004414F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205364CA1C50CD77004414F3 /* Assets.xcassets */; };
 		205364CE1C50CD77004414F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205364CC1C50CD77004414F3 /* LaunchScreen.storyboard */; };
+		CB12A765E3F166D161AFD3EB /* libPods-Badsmells.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231F4BE8A486346FEF168C8 /* libPods-Badsmells.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		205364CA1C50CD77004414F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		205364CD1C50CD77004414F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		205364CF1C50CD77004414F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9231F4BE8A486346FEF168C8 /* libPods-Badsmells.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Badsmells.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		972321577E0F71793B3FC3D8 /* Pods-Badsmells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badsmells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Badsmells/Pods-Badsmells.debug.xcconfig"; sourceTree = "<group>"; };
+		D5139165FB700269956EF6C0 /* Pods-Badsmells.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badsmells.release.xcconfig"; path = "Pods/Target Support Files/Pods-Badsmells/Pods-Badsmells.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB12A765E3F166D161AFD3EB /* libPods-Badsmells.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B89E86EFF95F88258A58A9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				972321577E0F71793B3FC3D8 /* Pods-Badsmells.debug.xcconfig */,
+				D5139165FB700269956EF6C0 /* Pods-Badsmells.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		205364B21C50CD77004414F3 = {
 			isa = PBXGroup;
 			children = (
 				205364BD1C50CD77004414F3 /* Badsmells */,
 				205364BC1C50CD77004414F3 /* Products */,
+				1B89E86EFF95F88258A58A9A /* Pods */,
+				E7C4691B5C1739695B1530D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E7C4691B5C1739695B1530D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9231F4BE8A486346FEF168C8 /* libPods-Badsmells.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 205364D21C50CD77004414F3 /* Build configuration list for PBXNativeTarget "Badsmells" */;
 			buildPhases = (
+				B883903EA1FCBC10E2AD93B1 /* Check Pods Manifest.lock */,
 				205364B71C50CD77004414F3 /* Sources */,
 				205364B81C50CD77004414F3 /* Frameworks */,
 				205364B91C50CD77004414F3 /* Resources */,
+				EC7C643D677E889F75CA9E48 /* Embed Pods Frameworks */,
+				9C8589E836AC97E018CBBE7B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C8589E836AC97E018CBBE7B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Badsmells/Pods-Badsmells-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B883903EA1FCBC10E2AD93B1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC7C643D677E889F75CA9E48 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Badsmells/Pods-Badsmells-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		205364B71C50CD77004414F3 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		205364D31C50CD77004414F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 972321577E0F71793B3FC3D8 /* Pods-Badsmells.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Badsmells/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		205364D41C50CD77004414F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5139165FB700269956EF6C0 /* Pods-Badsmells.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Badsmells/Info.plist;
@@ -298,6 +375,7 @@
 				205364D41C50CD77004414F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

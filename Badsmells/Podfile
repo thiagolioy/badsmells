@@ -1,0 +1,12 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+target 'Badsmells' do
+   pod "bricks-Mantle"
+   pod "Bricks"
+   pod 'libextobjc', '~> 0.4'
+   pod 'ObjectiveSugar'
+   pod 'AFNetworking', '~> 2.5'
+end
