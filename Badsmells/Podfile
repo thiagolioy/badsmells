@@ -4,6 +4,7 @@
 # use_frameworks!
 
 target 'Badsmells' do
+pod "TSMessages"
    pod "bricks-Mantle"
    pod "Bricks"
    pod 'libextobjc', '~> 0.4'

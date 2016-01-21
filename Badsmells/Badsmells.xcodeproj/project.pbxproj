@@ -13,6 +13,9 @@
 		205364C91C50CD77004414F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205364C71C50CD77004414F3 /* Main.storyboard */; };
 		205364CB1C50CD77004414F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205364CA1C50CD77004414F3 /* Assets.xcassets */; };
 		205364CE1C50CD77004414F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205364CC1C50CD77004414F3 /* LaunchScreen.storyboard */; };
+		20A12A491C50D27D003E7918 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A481C50D27D003E7918 /* ViewController2.m */; };
+		20A12A4C1C50D38B003E7918 /* ShotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A4B1C50D38B003E7918 /* ShotTableViewCell.m */; };
+		20A12A4F1C50D81F003E7918 /* ShotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A4E1C50D81F003E7918 /* ShotModel.m */; };
 		CB12A765E3F166D161AFD3EB /* libPods-Badsmells.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231F4BE8A486346FEF168C8 /* libPods-Badsmells.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,12 @@
 		205364CA1C50CD77004414F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		205364CD1C50CD77004414F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		205364CF1C50CD77004414F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20A12A471C50D27D003E7918 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		20A12A481C50D27D003E7918 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		20A12A4A1C50D38B003E7918 /* ShotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotTableViewCell.h; sourceTree = "<group>"; };
+		20A12A4B1C50D38B003E7918 /* ShotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotTableViewCell.m; sourceTree = "<group>"; };
+		20A12A4D1C50D81F003E7918 /* ShotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotModel.h; sourceTree = "<group>"; };
+		20A12A4E1C50D81F003E7918 /* ShotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotModel.m; sourceTree = "<group>"; };
 		9231F4BE8A486346FEF168C8 /* libPods-Badsmells.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Badsmells.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		972321577E0F71793B3FC3D8 /* Pods-Badsmells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badsmells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Badsmells/Pods-Badsmells.debug.xcconfig"; sourceTree = "<group>"; };
 		D5139165FB700269956EF6C0 /* Pods-Badsmells.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badsmells.release.xcconfig"; path = "Pods/Target Support Files/Pods-Badsmells/Pods-Badsmells.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +92,12 @@
 				205364CC1C50CD77004414F3 /* LaunchScreen.storyboard */,
 				205364CF1C50CD77004414F3 /* Info.plist */,
 				205364BE1C50CD77004414F3 /* Supporting Files */,
+				20A12A471C50D27D003E7918 /* ViewController2.h */,
+				20A12A481C50D27D003E7918 /* ViewController2.m */,
+				20A12A4A1C50D38B003E7918 /* ShotTableViewCell.h */,
+				20A12A4B1C50D38B003E7918 /* ShotTableViewCell.m */,
+				20A12A4D1C50D81F003E7918 /* ShotModel.h */,
+				20A12A4E1C50D81F003E7918 /* ShotModel.m */,
 			);
 			path = Badsmells;
 			sourceTree = "<group>";
@@ -225,6 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				205364C61C50CD77004414F3 /* ViewController.m in Sources */,
+				20A12A491C50D27D003E7918 /* ViewController2.m in Sources */,
+				20A12A4C1C50D38B003E7918 /* ShotTableViewCell.m in Sources */,
+				20A12A4F1C50D81F003E7918 /* ShotModel.m in Sources */,
 				205364C31C50CD77004414F3 /* AppDelegate.m in Sources */,
 				205364C01C50CD77004414F3 /* main.m in Sources */,
 			);
