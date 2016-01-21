@@ -6,9 +6,7 @@
 //  Copyright © 2016 Thiago Lioy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <BKBaseTableViewCell.h>
 
-@interface ShotTableViewCell : UITableViewCell
-@property(nonatomic,weak)IBOutlet UILabel *label1;
-@property(nonatomic,weak)IBOutlet UILabel *label2;
+@interface ShotTableViewCell : BKBaseTableViewCell
 @end

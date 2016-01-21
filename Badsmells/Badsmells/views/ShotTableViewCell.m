@@ -7,17 +7,17 @@
 //
 
 #import "ShotTableViewCell.h"
+#import "ShotModel.h"
+
+@interface ShotTableViewCell ()
+@property(nonatomic,weak)IBOutlet UILabel *label1;
+@property(nonatomic,weak)IBOutlet UILabel *label2;
+@end
 
 @implementation ShotTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(void)setup:(ShotModel*)object{
+    self.label1.text = object.title;
 }
 
 @end

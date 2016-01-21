@@ -16,6 +16,7 @@
 		20A12A491C50D27D003E7918 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A481C50D27D003E7918 /* ViewController2.m */; };
 		20A12A4C1C50D38B003E7918 /* ShotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A4B1C50D38B003E7918 /* ShotTableViewCell.m */; };
 		20A12A4F1C50D81F003E7918 /* ShotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A4E1C50D81F003E7918 /* ShotModel.m */; };
+		20E56B6C1C50DB7F00AC6397 /* DribbleClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E56B6B1C50DB7F00AC6397 /* DribbleClient.m */; };
 		CB12A765E3F166D161AFD3EB /* libPods-Badsmells.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231F4BE8A486346FEF168C8 /* libPods-Badsmells.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		20A12A4B1C50D38B003E7918 /* ShotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotTableViewCell.m; sourceTree = "<group>"; };
 		20A12A4D1C50D81F003E7918 /* ShotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotModel.h; sourceTree = "<group>"; };
 		20A12A4E1C50D81F003E7918 /* ShotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotModel.m; sourceTree = "<group>"; };
+		20E56B6A1C50DB7F00AC6397 /* DribbleClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DribbleClient.h; sourceTree = "<group>"; };
+		20E56B6B1C50DB7F00AC6397 /* DribbleClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DribbleClient.m; sourceTree = "<group>"; };
 		9231F4BE8A486346FEF168C8 /* libPods-Badsmells.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Badsmells.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		972321577E0F71793B3FC3D8 /* Pods-Badsmells.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badsmells.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Badsmells/Pods-Badsmells.debug.xcconfig"; sourceTree = "<group>"; };
 		D5139165FB700269956EF6C0 /* Pods-Badsmells.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Badsmells.release.xcconfig"; path = "Pods/Target Support Files/Pods-Badsmells/Pods-Badsmells.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		205364BD1C50CD77004414F3 /* Badsmells */ = {
 			isa = PBXGroup;
 			children = (
+				20E56B691C50DB6C00AC6397 /* network */,
 				20191F6C1C50DB0C007D4C36 /* App */,
 				20191F681C50DABE007D4C36 /* controllers */,
 				20191F6A1C50DACB007D4C36 /* models */,
@@ -148,6 +152,15 @@
 				205364BF1C50CD77004414F3 /* main.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20E56B691C50DB6C00AC6397 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				20E56B6A1C50DB7F00AC6397 /* DribbleClient.h */,
+				20E56B6B1C50DB7F00AC6397 /* DribbleClient.m */,
+			);
+			name = network;
 			sourceTree = "<group>";
 		};
 		E7C4691B5C1739695B1530D3 /* Frameworks */ = {
@@ -281,6 +294,7 @@
 			files = (
 				205364C61C50CD77004414F3 /* ViewController.m in Sources */,
 				20A12A491C50D27D003E7918 /* ViewController2.m in Sources */,
+				20E56B6C1C50DB7F00AC6397 /* DribbleClient.m in Sources */,
 				20A12A4C1C50D38B003E7918 /* ShotTableViewCell.m in Sources */,
 				20A12A4F1C50D81F003E7918 /* ShotModel.m in Sources */,
 				205364C31C50CD77004414F3 /* AppDelegate.m in Sources */,

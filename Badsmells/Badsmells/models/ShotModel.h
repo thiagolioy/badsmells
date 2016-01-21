@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Mantle.h>
-@interface ShotModel : MTLModel<MTLJSONSerializing>
+#import <bricks-Mantle/BKMBaseMantleObj.h>
+
+@interface ShotModel : BKMBaseMantleObj
 @property(nonatomic,strong) NSString *title;
 @end

@@ -7,68 +7,57 @@
 //
 
 #import "ViewController2.h"
-#import <AFNetworking.h>
 #import "ShotTableViewCell.h"
 #import "ShotModel.h"
 #import <TSMessage.h>
+#import "DribbleClient.h"
+#import <libextobjc/EXTScope.h>
 
 @interface ViewController2 ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,weak)IBOutlet UITableView *tableview1;
 @property(nonatomic,strong)NSArray *shots;
 @end
 
-static NSString *cellId = @"ShotTableViewCell";
 @implementation ViewController2
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self fetchShots];
+}
 
-    NSDictionary *params = @{@"page": [NSNumber numberWithInteger:1]};
-    NSString *acessToken = @"951320fc6f069e9f2b8f25201f504eca56caa29aa5c90d67237fa37fad8dee5b";
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@", acessToken] forHTTPHeaderField:@"Authorization"];
-    
-    [manager GET:@"https://api.dribbble.com/v1/shots" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"response : %@",responseObject);
-        
-        
-        ShotModel *model = [MTLJSONAdapter modelOfClass:ShotModel.class
-                         fromJSONDictionary:[((NSArray*)responseObject) objectAtIndex:0]
-                                      error:nil];
-        
-        [TSMessage showNotificationWithTitle:model.title
-                                        type:TSMessageNotificationTypeWarning];
-
-        
-        self.shots = (NSArray*)responseObject;
-        self.tableview1.delegate = self;
-        self.tableview1.dataSource = self;
-        [self.tableview1 reloadData];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+-(void)fetchShots{
+    @weakify(self);
+    [[DribbleClient sharedClient] fetchShots:^(NSArray *shots) {
+        @strongify(self);
+        self.shots = shots;
+        [self sendShotsMessage];
+        [self updateTableView];
     }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)sendShotsMessage{
+    ShotModel *model = self.shots.firstObject;
+    [TSMessage showNotificationWithTitle:model.title
+                                    type:TSMessageNotificationTypeWarning];
+
 }
+
+-(void)updateTableView{
+    self.tableview1.delegate = self;
+    self.tableview1.dataSource = self;
+    [self.tableview1 reloadData];
+
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.shots.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    ShotTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
-    NSDictionary *dc = [self.shots objectAtIndex:indexPath.row];
-    
-    cell.label1.text = [dc valueForKey:@"title"];
-    if(indexPath.row %2 == 0)
-        [cell.label1 setTintColor:[UIColor greenColor]];
-    else
-        [cell.label1 setTintColor:[UIColor redColor]];
+    ShotTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[ShotTableViewCell cellIdentifier] forIndexPath:indexPath];
+    ShotModel *shot = [self.shots objectAtIndex:indexPath.row];
+    [cell setup:shot];
     return cell;
 }
 

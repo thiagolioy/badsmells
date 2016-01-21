@@ -9,7 +9,4 @@
 #import "ShotModel.h"
 
 @implementation ShotModel
-+ (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return [NSDictionary mtl_identityPropertyMapWithModel:self.class];
-}
 @end
